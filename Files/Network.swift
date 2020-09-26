@@ -127,16 +127,7 @@ class SFNetwork  {
     
             if let error = error
            {
-               print(error)
-            completion(nil,"error")
-           }
-            else if let response = response {
-               print("here is  resposne \(response)")
-
-           }else if let data = data
-            {
-               print("here in data")
-               print(data)
+            completion(nil,error.localizedDescription)
            }
 
            DispatchQueue.main.async { // Correct
