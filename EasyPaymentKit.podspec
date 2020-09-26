@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "EasyPaymentKit"
-  spec.version      = "0.0.12"
+  spec.version      = "0.0.13"
   spec.summary      = "Accept Credtit or debit card with no effort"
 
   # This description is used to generate tags and improve search results.
@@ -65,7 +65,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.platform     = :ios
-  # spec.platform     = :ios, "9.0"
+   spec.platform     = :ios, "9.0"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
@@ -91,8 +91,9 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
+  spec.source_files  = "Files/*.{swift,xib}"
   spec.exclude_files = "Classes/Exclude"
+  spec.swift_version = "5.0"
 
   # spec.public_header_files = "Classes/**/*.h"
 
