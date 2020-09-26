@@ -107,10 +107,14 @@ class SFNetwork  {
     //let parameters = "bank_account%5Bcountry%5D=US&bank_account%5Bcurrency%5D=usd&bank_account%5Baccount_holder_name%5D=Jenny%20Rosen&bank_account%5Baccount_holder_type%5D=individual&bank_account%5Brouting_number%5D=110000000&bank_account%5Baccount_number%5D=000123456789"
     //let postData =  parameters.data(using: .utf8)
     
+        guard !SFConfiguartion.shared.publicKey.isEmpty else{
+        completion(nil,"Please Provide Your Payment Gateway Public Key")
+        return
+        }
        var request : URLRequest = URLRequest(url: url)
        request.httpMethod = "POST"
          request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField:"Content-Type");
-       request.setValue("Bearer pk_test_J1qoKzc5TfTY7DxzZemAgJuj0063HLXlTt", forHTTPHeaderField:"Authorization");
+        request.setValue("Bearer \(SFConfiguartion.shared.publicKey)", forHTTPHeaderField:"Authorization");
        //request.setValue(NSLocalizedString("lang", comment: ""), forHTTPHeaderField:"Accept-Language");
        request.httpBody = jsonData
 

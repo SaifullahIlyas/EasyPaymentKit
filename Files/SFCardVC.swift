@@ -78,7 +78,7 @@ extension SFPaymentInfoAble {
     }
     public override func loadView() {
        let bundle = Bundle(for: self.classForCoder)
-        bundle.loadNibNamed("StripeCardVC", owner: self, options: nil)
+        bundle.loadNibNamed("SFCardVC", owner: self, options: nil)
        
     }
 

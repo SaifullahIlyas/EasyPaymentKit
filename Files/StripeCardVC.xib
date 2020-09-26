@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StripeCardVC" customModule="TestStripe" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SFCardVC" customModule="EasyPaymentKit" customModuleProvider="target">
             <connections>
                 <outlet property="cardHolderNameTF" destination="ElB-vL-8X6" id="lBQ-wH-bKn"/>
                 <outlet property="cardNumberTF" destination="dkP-P4-xgL" id="ays-Kd-el6"/>
