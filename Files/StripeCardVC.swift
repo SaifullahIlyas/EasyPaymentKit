@@ -77,9 +77,8 @@ extension SFPaymentInfoAble {
         
     }
     public override func loadView() {
-        self.modalPresentationStyle = .fullScreen
-        let bundle = Bundle(identifier: "com.saifuu.EasyPaymentKit")
-        bundle?.loadNibNamed("StripeCardVC", owner: self, options: nil)
+       let bundle = Bundle(for: self.classForCoder)
+        bundle.loadNibNamed("StripeCardVC", owner: self, options: nil)
        
     }
 
