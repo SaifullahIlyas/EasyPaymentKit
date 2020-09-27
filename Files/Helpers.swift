@@ -1,13 +1,13 @@
 
 import UIKit
 
-enum SFControllerPresentation {
+public enum SFControllerPresentation {
     case full
     case popupCenter
     case bottomSheet
     
 }
-public class Helper {
+ class Helper {
     
     
    static let single = Helper()
@@ -16,22 +16,22 @@ public class Helper {
 public class SFConfiguartion  {
    public var publicKey = ""
   public  static let shared = SFConfiguartion()
-   public let ui : UserInterface = UserInterface()
+   public var ui : UserInterface = UserInterface()
 }
 public struct UserInterface {
     
-    var InputFieldHeight : CGFloat =  50;
-    var isCardNameFieldVisible = false
-    var  textFieldsTint : UIColor = .blue
-    var textColor : UIColor = .blue
-    var font : UIFont = UIFont.systemFont(ofSize: 14)
-   var postiveActionButtonTitle : String = "Add"
-   var negetiveActionButtonTitle : String = "Cancel"
-    var postiveActionBackColor : UIColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
-    var negitiveActionBackColor : UIColor = .red
-    var isNegetiveButtonVisible = false
-    var buttontitleColor : UIColor = .white
-    var SFControllerPresentation : SFControllerPresentation = .popupCenter
+   public var InputFieldHeight : CGFloat =  50;
+   public var isCardNameFieldVisible = false
+   public var  textFieldsTint : UIColor = .blue
+   public var textColor : UIColor = .blue
+   public  var font : UIFont = UIFont.systemFont(ofSize: 14)
+   public var postiveActionButtonTitle : String = "Add"
+   public var negetiveActionButtonTitle : String = "Cancel"
+   public  var postiveActionBackColor : UIColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
+   public  var negitiveActionBackColor : UIColor = .red
+   public  var isNegetiveButtonVisible = false
+   public  var buttontitleColor : UIColor = .white
+   public  var SFControllerPresentation : SFControllerPresentation = .popupCenter
     
 }
 extension Collection {
