@@ -95,6 +95,8 @@ extension SFPaymentInfoAble {
 func handleCreditCardResponse(cardInfo:StripeCardResponse?, error:String?) {
     guard error == nil else{
         delegate?.didErrorWhileGeneratingToken(reason: error ?? "")
+        positiveActionBtn?.isUserInteractionEnabled = true
+           positiveActionBtn?.removeLoader()
       return
     }
     guard let token = cardInfo?.card?.id ,let last4Digits = cardInfo?.card?.last4 ,let brand = cardInfo?.card?.brand ,let expMonth = cardInfo?.card?.expMonth , let expYear = cardInfo?.card?.expYear else {return}
