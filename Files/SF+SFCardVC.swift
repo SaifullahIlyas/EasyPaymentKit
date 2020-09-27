@@ -119,6 +119,7 @@ extension SFPaymentInfoAble {
     
     private func setUpView() {
         
+        let viewTopMargin = self.navigationController != nil ? (self.navigationController?.navigationBar.frame.height ?? 0.0) + 10 : 0
        
         let SFFieldsInputView = UIView()
         SFFieldsInputView.backgroundColor = .white
@@ -138,7 +139,7 @@ extension SFPaymentInfoAble {
         SFFieldsInputView.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: SFConfiguartion.shared.UI.SFControllerPresentation == SFControllerPresentation.popupCenter ? -20 : 0).isActive = true
         
         if SFConfiguartion.shared.UI.SFControllerPresentation == .full {
-        SFFieldsInputView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 0).isActive = true
+        SFFieldsInputView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: viewTopMargin).isActive = true
         }
         else if SFConfiguartion.shared.UI.SFControllerPresentation == .bottomSheet {
           SFFieldsInputView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0).isActive = true
