@@ -130,6 +130,7 @@ extension UIView{
     static let loaderShapeLayerName = "loaderShapeLayerName"
     func addLoader() {
         self.layoutIfNeeded()
+        self.isUserInteractionEnabled = false
         let trackLayer = CAShapeLayer()
         trackLayer.name = UIView.loaderTrackLayerName
         //trackLayer.position = CGPoint(x: self.frame.w - 40 , y: 0)
@@ -181,6 +182,7 @@ extension UIView{
                 layer.removeFromSuperlayer()
             }
         }
+        self.isUserInteractionEnabled = true
         self.layoutIfNeeded()
     }
     

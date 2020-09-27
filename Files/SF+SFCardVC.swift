@@ -219,13 +219,24 @@ func handleCreditCardResponse(cardInfo:StripeCardResponse?, error:String?) {
     guard let token = cardInfo?.card?.id ,let last4Digits = cardInfo?.card?.last4 ,let brand = cardInfo?.card?.brand ,let expMonth = cardInfo?.card?.expMonth , let expYear = cardInfo?.card?.expYear else {return}
     
     delegate?.didCardCreated(with: SFCardInfo.init(token: token, last4Digits: last4Digits, cardBrand: brand, expMonth: expMonth.description, expYear: expYear.description))
-    positiveActionBtn?.isUserInteractionEnabled = true
     positiveActionBtn?.removeLoader()
+    if self.isModal {
+            self.dismiss(animated: true, completion: nil)
+           }
+           else {
+               self.navigationController?.popViewController(animated: true)
+           }
     
     }
     
     @objc func negetiveAction() {
-        self.dismiss(animated: true, completion: nil)
+        if self.isModal {
+         self.dismiss(animated: true, completion: nil)
+        }
+        else {
+            self.navigationController?.popViewController(animated: true)
+        }
+        
     }
     
     /*
