@@ -16,9 +16,8 @@ public enum SFControllerPresentation {
 public class SFConfiguartion  {
    public var publicKey = ""
   public  static let shared = SFConfiguartion()
-   public var UI : UserInterface = UserInterface()
 }
-public struct UserInterface {
+public struct SFTheme {
     
    public var InputFieldHeight : CGFloat =  50;
    public var isCardNameFieldVisible = false
