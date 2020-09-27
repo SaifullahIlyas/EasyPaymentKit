@@ -16,7 +16,7 @@ public enum SFControllerPresentation {
 public class SFConfiguartion  {
    public var publicKey = ""
   public  static let shared = SFConfiguartion()
-   public var ui : UserInterface = UserInterface()
+   public var UI : UserInterface = UserInterface()
 }
 public struct UserInterface {
     
@@ -202,4 +202,14 @@ extension UIView{
                self.transform = CGAffineTransform.identity
            })
        }
+}
+extension UIViewController {
+    var isModal: Bool {
+
+        let presentingIsModal = presentingViewController != nil
+        let presentingIsNavigation = navigationController?.presentingViewController?.presentedViewController == navigationController
+        let presentingIsTabBar = tabBarController?.presentingViewController is UITabBarController
+
+        return presentingIsModal || presentingIsNavigation || presentingIsTabBar
+    }
 }

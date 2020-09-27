@@ -59,15 +59,15 @@ extension SFPaymentInfoAble {
         self.cardNumberTF?.placeholder = "Card Number"
         self.expireyDateTF?.placeholder = "MM/YY"
         self.cvcTF?.placeholder = "123"
-        self.cardHolderNameTF?.isHidden = !(SFConfiguartion.shared.ui.isCardNameFieldVisible)
-        self.positiveActionBtn?.backgroundColor = SFConfiguartion.shared.ui.postiveActionBackColor
-        self.negetiveActionBtn?.backgroundColor = SFConfiguartion.shared.ui.negitiveActionBackColor
+        self.cardHolderNameTF?.isHidden = !(SFConfiguartion.shared.UI.isCardNameFieldVisible)
+        self.positiveActionBtn?.backgroundColor = SFConfiguartion.shared.UI.postiveActionBackColor
+        self.negetiveActionBtn?.backgroundColor = SFConfiguartion.shared.UI.negitiveActionBackColor
       //  SFConfiguartion.shared.ui.isNegetiveButtonActionVisible == false ? self.negetiveActionBtn.removeFromSuperview(): print("")
-        self.positiveActionBtn?.setTitleColor(SFConfiguartion.shared.ui.buttontitleColor, for: .normal)
+        self.positiveActionBtn?.setTitleColor(SFConfiguartion.shared.UI.buttontitleColor, for: .normal)
         
-        self.negetiveActionBtn?.setTitleColor(SFConfiguartion.shared.ui.buttontitleColor, for: .normal)
-        self.positiveActionBtn?.setTitle(SFConfiguartion.shared.ui.postiveActionButtonTitle, for: .normal)
-        self.negetiveActionBtn?.setTitle(SFConfiguartion.shared.ui.negetiveActionButtonTitle, for: .normal)
+        self.negetiveActionBtn?.setTitleColor(SFConfiguartion.shared.UI.buttontitleColor, for: .normal)
+        self.positiveActionBtn?.setTitle(SFConfiguartion.shared.UI.postiveActionButtonTitle, for: .normal)
+        self.negetiveActionBtn?.setTitle(SFConfiguartion.shared.UI.negetiveActionButtonTitle, for: .normal)
         
         self.positiveActionBtn?.isUserInteractionEnabled = false
         self.positiveActionBtn?.alpha = self.positiveActionBtn?.isUserInteractionEnabled == true ? 1.0 : 0.95
@@ -79,13 +79,13 @@ extension SFPaymentInfoAble {
     
     public init() {
         super.init(nibName: nil, bundle: nil)
-        if SFConfiguartion.shared.ui.SFControllerPresentation == SFControllerPresentation.bottomSheet{
+        if SFConfiguartion.shared.UI.SFControllerPresentation == SFControllerPresentation.bottomSheet{
             self.modalPresentationStyle = .overCurrentContext
         }
-        else if SFConfiguartion.shared.ui.SFControllerPresentation == SFControllerPresentation.full{
+        else if SFConfiguartion.shared.UI.SFControllerPresentation == SFControllerPresentation.full{
         self.modalPresentationStyle = .fullScreen
         }
-        else if SFConfiguartion.shared.ui.SFControllerPresentation == SFControllerPresentation.popupCenter{
+        else if SFConfiguartion.shared.UI.SFControllerPresentation == SFControllerPresentation.popupCenter{
         self.modalPresentationStyle = .overCurrentContext
         self.modalTransitionStyle = .crossDissolve
         }
@@ -102,13 +102,13 @@ extension SFPaymentInfoAble {
     public override func loadView() {
         
         self.view = UIView()
-        if SFConfiguartion.shared.ui.SFControllerPresentation == SFControllerPresentation.bottomSheet{
+        if SFConfiguartion.shared.UI.SFControllerPresentation == SFControllerPresentation.bottomSheet{
             self.view.backgroundColor = .clear
         }
-        else if SFConfiguartion.shared.ui.SFControllerPresentation == SFControllerPresentation.full{
+        else if SFConfiguartion.shared.UI.SFControllerPresentation == SFControllerPresentation.full{
           self.view.backgroundColor = .white
         }
-        else if SFConfiguartion.shared.ui.SFControllerPresentation == SFControllerPresentation.popupCenter{
+        else if SFConfiguartion.shared.UI.SFControllerPresentation == SFControllerPresentation.popupCenter{
                  self.view.backgroundColor = .clear
                }
        //
@@ -134,16 +134,16 @@ extension SFPaymentInfoAble {
         fieldStackView.axis = .vertical
         //fieldStackView.backgroundColor = .green
         SFFieldsInputView.translatesAutoresizingMaskIntoConstraints = false
-        SFFieldsInputView.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: SFConfiguartion.shared.ui.SFControllerPresentation == SFControllerPresentation.popupCenter ? 20 : 0).isActive = true
-        SFFieldsInputView.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: SFConfiguartion.shared.ui.SFControllerPresentation == SFControllerPresentation.popupCenter ? -20 : 0).isActive = true
+        SFFieldsInputView.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: SFConfiguartion.shared.UI.SFControllerPresentation == SFControllerPresentation.popupCenter ? 20 : 0).isActive = true
+        SFFieldsInputView.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: SFConfiguartion.shared.UI.SFControllerPresentation == SFControllerPresentation.popupCenter ? -20 : 0).isActive = true
         
-        if SFConfiguartion.shared.ui.SFControllerPresentation == .full {
+        if SFConfiguartion.shared.UI.SFControllerPresentation == .full {
         SFFieldsInputView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 0).isActive = true
         }
-        else if SFConfiguartion.shared.ui.SFControllerPresentation == .bottomSheet {
+        else if SFConfiguartion.shared.UI.SFControllerPresentation == .bottomSheet {
           SFFieldsInputView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0).isActive = true
         }
-        else if SFConfiguartion.shared.ui.SFControllerPresentation == .popupCenter {
+        else if SFConfiguartion.shared.UI.SFControllerPresentation == .popupCenter {
             SFFieldsInputView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0).isActive = true
             SFFieldsInputView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 0).isActive = true
             
@@ -155,7 +155,7 @@ extension SFPaymentInfoAble {
         fieldStackView.topAnchor.constraint(equalTo: SFFieldsInputView.topAnchor, constant: 40).isActive = true
         fieldStackView.bottomAnchor.constraint(equalTo: SFFieldsInputView.bottomAnchor, constant: -40).isActive = true
         
-        if SFConfiguartion.shared.ui.isCardNameFieldVisible == true {
+        if SFConfiguartion.shared.UI.isCardNameFieldVisible == true {
             
             cardHolderNameTF = UITextField()
             fieldStackView.addArrangedSubview(cardHolderNameTF!)
@@ -176,7 +176,7 @@ extension SFPaymentInfoAble {
         fieldStackView.addArrangedSubview(cvc_expireystackView)
         
         //MARK:- If Negetive Action Button visible then add in Horizontal Stack
-        if SFConfiguartion.shared.ui.isNegetiveButtonVisible  == true {
+        if SFConfiguartion.shared.UI.isNegetiveButtonVisible  == true {
           
             let buttonStack  = UIStackView()
             buttonStack.alignment = .fill
