@@ -8,28 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		227C544E251FC17B008A50D4 /* EasyPaymentKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 227C544C251FC17B008A50D4 /* EasyPaymentKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		227C545E251FC1B1008A50D4 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C5455251FC1B0008A50D4 /* NetworkResponse.swift */; };
-		227C545F251FC1B1008A50D4 /* CreditCardValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C5456251FC1B0008A50D4 /* CreditCardValidator.swift */; };
-		227C5460251FC1B1008A50D4 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C5457251FC1B0008A50D4 /* Helpers.swift */; };
-		227C5461251FC1B1008A50D4 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C5458251FC1B0008A50D4 /* Network.swift */; };
-		227C5463251FC1B1008A50D4 /* SFCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C545A251FC1B0008A50D4 /* SFCardVC.swift */; };
-		227C5464251FC1B1008A50D4 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C545B251FC1B0008A50D4 /* CustomTextField.swift */; };
-		227C5465251FC1B1008A50D4 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C545C251FC1B0008A50D4 /* Models.swift */; };
-		227C5466251FC1B1008A50D4 /* CreditCardValidationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C545D251FC1B0008A50D4 /* CreditCardValidationType.swift */; };
+		227C545E251FC1B1008A50D4 /* SF+NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C5455251FC1B0008A50D4 /* SF+NetworkResponse.swift */; };
+		227C545F251FC1B1008A50D4 /* SF+CreditCardValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C5456251FC1B0008A50D4 /* SF+CreditCardValidator.swift */; };
+		227C5460251FC1B1008A50D4 /* SF+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C5457251FC1B0008A50D4 /* SF+Helpers.swift */; };
+		227C5461251FC1B1008A50D4 /* SF+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C5458251FC1B0008A50D4 /* SF+Network.swift */; };
+		227C5463251FC1B1008A50D4 /* SF+SFCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C545A251FC1B0008A50D4 /* SF+SFCardVC.swift */; };
+		227C5464251FC1B1008A50D4 /* SF+CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C545B251FC1B0008A50D4 /* SF+CustomTextField.swift */; };
+		227C5465251FC1B1008A50D4 /* SF+Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C545C251FC1B0008A50D4 /* SF+Models.swift */; };
+		227C5466251FC1B1008A50D4 /* SF+CreditCardValidationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C545D251FC1B0008A50D4 /* SF+CreditCardValidationType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		227C5449251FC17B008A50D4 /* EasyPaymentKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyPaymentKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		227C544C251FC17B008A50D4 /* EasyPaymentKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyPaymentKit.h; sourceTree = "<group>"; };
 		227C544D251FC17B008A50D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		227C5455251FC1B0008A50D4 /* NetworkResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
-		227C5456251FC1B0008A50D4 /* CreditCardValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardValidator.swift; sourceTree = "<group>"; };
-		227C5457251FC1B0008A50D4 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
-		227C5458251FC1B0008A50D4 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		227C545A251FC1B0008A50D4 /* SFCardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFCardVC.swift; sourceTree = "<group>"; };
-		227C545B251FC1B0008A50D4 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		227C545C251FC1B0008A50D4 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		227C545D251FC1B0008A50D4 /* CreditCardValidationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardValidationType.swift; sourceTree = "<group>"; };
+		227C5455251FC1B0008A50D4 /* SF+NetworkResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SF+NetworkResponse.swift"; sourceTree = "<group>"; };
+		227C5456251FC1B0008A50D4 /* SF+CreditCardValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SF+CreditCardValidator.swift"; sourceTree = "<group>"; };
+		227C5457251FC1B0008A50D4 /* SF+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SF+Helpers.swift"; sourceTree = "<group>"; };
+		227C5458251FC1B0008A50D4 /* SF+Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SF+Network.swift"; sourceTree = "<group>"; };
+		227C545A251FC1B0008A50D4 /* SF+SFCardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SF+SFCardVC.swift"; sourceTree = "<group>"; };
+		227C545B251FC1B0008A50D4 /* SF+CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SF+CustomTextField.swift"; sourceTree = "<group>"; };
+		227C545C251FC1B0008A50D4 /* SF+Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SF+Models.swift"; sourceTree = "<group>"; };
+		227C545D251FC1B0008A50D4 /* SF+CreditCardValidationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SF+CreditCardValidationType.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,14 +72,14 @@
 		227C5454251FC1B0008A50D4 /* Files */ = {
 			isa = PBXGroup;
 			children = (
-				227C5455251FC1B0008A50D4 /* NetworkResponse.swift */,
-				227C5456251FC1B0008A50D4 /* CreditCardValidator.swift */,
-				227C5457251FC1B0008A50D4 /* Helpers.swift */,
-				227C5458251FC1B0008A50D4 /* Network.swift */,
-				227C545A251FC1B0008A50D4 /* SFCardVC.swift */,
-				227C545B251FC1B0008A50D4 /* CustomTextField.swift */,
-				227C545C251FC1B0008A50D4 /* Models.swift */,
-				227C545D251FC1B0008A50D4 /* CreditCardValidationType.swift */,
+				227C5455251FC1B0008A50D4 /* SF+NetworkResponse.swift */,
+				227C5456251FC1B0008A50D4 /* SF+CreditCardValidator.swift */,
+				227C5457251FC1B0008A50D4 /* SF+Helpers.swift */,
+				227C5458251FC1B0008A50D4 /* SF+Network.swift */,
+				227C545A251FC1B0008A50D4 /* SF+SFCardVC.swift */,
+				227C545B251FC1B0008A50D4 /* SF+CustomTextField.swift */,
+				227C545C251FC1B0008A50D4 /* SF+Models.swift */,
+				227C545D251FC1B0008A50D4 /* SF+CreditCardValidationType.swift */,
 			);
 			name = Files;
 			path = ../../Files;
@@ -164,14 +164,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				227C545E251FC1B1008A50D4 /* NetworkResponse.swift in Sources */,
-				227C5460251FC1B1008A50D4 /* Helpers.swift in Sources */,
-				227C5464251FC1B1008A50D4 /* CustomTextField.swift in Sources */,
-				227C5466251FC1B1008A50D4 /* CreditCardValidationType.swift in Sources */,
-				227C5461251FC1B1008A50D4 /* Network.swift in Sources */,
-				227C545F251FC1B1008A50D4 /* CreditCardValidator.swift in Sources */,
-				227C5463251FC1B1008A50D4 /* SFCardVC.swift in Sources */,
-				227C5465251FC1B1008A50D4 /* Models.swift in Sources */,
+				227C545E251FC1B1008A50D4 /* SF+NetworkResponse.swift in Sources */,
+				227C5460251FC1B1008A50D4 /* SF+Helpers.swift in Sources */,
+				227C5464251FC1B1008A50D4 /* SF+CustomTextField.swift in Sources */,
+				227C5466251FC1B1008A50D4 /* SF+CreditCardValidationType.swift in Sources */,
+				227C5461251FC1B1008A50D4 /* SF+Network.swift in Sources */,
+				227C545F251FC1B1008A50D4 /* SF+CreditCardValidator.swift in Sources */,
+				227C5463251FC1B1008A50D4 /* SF+SFCardVC.swift in Sources */,
+				227C5465251FC1B1008A50D4 /* SF+Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

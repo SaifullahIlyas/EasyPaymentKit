@@ -74,7 +74,7 @@ struct CardToken:ParamConveritible {
 
 
 
-class NetWorkConstant {
+class SFNetWorkConstant {
  
     
     

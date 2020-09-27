@@ -11,7 +11,7 @@ public enum SFControllerPresentation {
     
     
    static let single = Helper()
-    let cardValidator  = CreditCardValidator()
+    let cardValidator  = SFCreditCardValidator()
 }
 public class SFConfiguartion  {
    public var publicKey = ""

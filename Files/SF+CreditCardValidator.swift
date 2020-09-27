@@ -7,10 +7,10 @@
 
 import Foundation
 
-public class CreditCardValidator {
+public class SFCreditCardValidator {
     public lazy var types: [CreditCardValidationType] = {
         var types = [CreditCardValidationType]()
-        for object in CreditCardValidator.types {
+        for object in SFCreditCardValidator.types {
             types.append(CreditCardValidationType(dict: object))
         }
         return types
