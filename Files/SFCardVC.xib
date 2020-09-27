@@ -25,28 +25,28 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VSL-Cz-ypU">
-                    <rect key="frame" x="18" y="64" width="339" height="142"/>
+                    <rect key="frame" x="18" y="64" width="339" height="96"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ElB-vL-8X6">
-                            <rect key="frame" x="0.0" y="0.0" width="339" height="34"/>
+                        <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ElB-vL-8X6">
+                            <rect key="frame" x="0.0" y="0.0" width="339" height="18.666666666666668"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dkP-P4-xgL">
-                            <rect key="frame" x="0.0" y="54" width="339" height="34"/>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dkP-P4-xgL">
+                            <rect key="frame" x="0.0" y="38.666666666666671" width="339" height="18.666666666666671"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Z8q-66-cOQ">
-                            <rect key="frame" x="0.0" y="108" width="339" height="34"/>
+                            <rect key="frame" x="0.0" y="77.333333333333343" width="339" height="18.666666666666671"/>
                             <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qxZ-Cf-bVH">
-                                    <rect key="frame" x="0.0" y="0.0" width="144.66666666666666" height="34"/>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qxZ-Cf-bVH">
+                                    <rect key="frame" x="0.0" y="0.0" width="144.66666666666666" height="18.666666666666668"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ib7-rO-5sh">
-                                    <rect key="frame" x="194.66666666666663" y="0.0" width="144.33333333333337" height="34"/>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ib7-rO-5sh">
+                                    <rect key="frame" x="194.66666666666663" y="0.0" width="144.33333333333337" height="18.666666666666668"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
@@ -59,7 +59,7 @@
                     </constraints>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ka9-ck-tY0">
-                    <rect key="frame" x="212.66666666666663" y="235.66666666666666" width="144.33333333333337" height="29.999999999999972"/>
+                    <rect key="frame" x="212.66666666666663" y="189.66666666666666" width="144.33333333333337" height="30"/>
                     <state key="normal" title="Add">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
@@ -68,7 +68,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9YA-FW-YCv">
-                    <rect key="frame" x="18" y="235.66666666666666" width="144.66666666666666" height="29.999999999999972"/>
+                    <rect key="frame" x="18" y="189.66666666666666" width="144.66666666666666" height="30"/>
                     <state key="normal" title="Cancel">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
