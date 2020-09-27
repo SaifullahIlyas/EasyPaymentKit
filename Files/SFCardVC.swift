@@ -12,7 +12,7 @@ import UIKit
 public protocol SFPaymentInfoAble : class{
     func  didCardCreated(with info:SFCardInfo)
     func didBankAccountTokenGenerated()
-    func didErrorWhileGeneratingToken()
+    func didErrorWhileGeneratingToken(reason error : String)
 }
 
 extension SFPaymentInfoAble {
@@ -93,7 +93,10 @@ extension SFPaymentInfoAble {
     }
     
 func handleCreditCardResponse(cardInfo:StripeCardResponse?, error:String?) {
-    
+    guard error == nil else{
+        delegate?.didErrorWhileGeneratingToken(reason: error ?? "")
+      return
+    }
     guard let token = cardInfo?.card?.id ,let last4Digits = cardInfo?.card?.last4 ,let brand = cardInfo?.card?.brand ,let expMonth = cardInfo?.card?.expMonth , let expYear = cardInfo?.card?.expYear else {return}
     
     delegate?.didCardCreated(with: SFCardInfo.init(token: token, last4Digits: last4Digits, cardBrand: brand, expMonth: expMonth.description, expYear: expYear.description))
