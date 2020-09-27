@@ -27,20 +27,19 @@ extension SFPaymentInfoAble {
 
  public  class SFCardVC: UIViewController {
     
+   @IBOutlet private  var cardNumberTF: UITextField?
+    @IBOutlet private  var cardHolderNameTF : UITextField?
     
-   @IBOutlet private weak var cardNumberTF: UITextField?
-    @IBOutlet private weak var cardHolderNameTF : UITextField?
+    @IBOutlet private  var expireyDateTF: UITextField?
     
-    @IBOutlet private weak var expireyDateTF: UITextField?
-    
-    @IBOutlet private weak var cvcTF: UITextField?
-    
-    
-    @IBOutlet weak var positiveActionBtn: UIButton?
-    
-    @IBOutlet weak var negetiveActionBtn: UIButton!
+    @IBOutlet private  var cvcTF: UITextField?
     
     
+    @IBOutlet private var positiveActionBtn: UIButton?
+    
+    @IBOutlet private var negetiveActionBtn: UIButton?
+    
+    private  var fieldStackView = UIStackView()
    public weak var delegate : SFPaymentInfoAble?
     
     public var isPlaceHolderImageEnabled = true
@@ -63,28 +62,146 @@ extension SFPaymentInfoAble {
         self.cardHolderNameTF?.isHidden = !(SFConfiguartion.shared.ui.isCardNameFieldVisible)
         self.positiveActionBtn?.backgroundColor = SFConfiguartion.shared.ui.postiveActionBackColor
         self.negetiveActionBtn?.backgroundColor = SFConfiguartion.shared.ui.negitiveActionBackColor
-        SFConfiguartion.shared.ui.isNegetiveButtonActionVisible == false ? self.negetiveActionBtn.removeFromSuperview(): print("")
+      //  SFConfiguartion.shared.ui.isNegetiveButtonActionVisible == false ? self.negetiveActionBtn.removeFromSuperview(): print("")
+        self.positiveActionBtn?.setTitleColor(SFConfiguartion.shared.ui.buttontitleColor, for: .normal)
+        
+        self.negetiveActionBtn?.setTitleColor(SFConfiguartion.shared.ui.buttontitleColor, for: .normal)
+        self.positiveActionBtn?.setTitle(SFConfiguartion.shared.ui.postiveActionButtonTitle, for: .normal)
+        self.negetiveActionBtn?.setTitle(SFConfiguartion.shared.ui.negetiveActionButtonTitle, for: .normal)
+        
         self.positiveActionBtn?.isUserInteractionEnabled = false
         self.positiveActionBtn?.alpha = self.positiveActionBtn?.isUserInteractionEnabled == true ? 1.0 : 0.95
         
         //self.view.layoutIfNeeded()
-        
         // Do any additional setup after loading the view.
     }
 
+    
+    public init() {
+        super.init(nibName: nil, bundle: nil)
+        if SFConfiguartion.shared.ui.SFControllerPresentation == SFControllerPresentation.bottomSheet{
+            self.modalPresentationStyle = .overCurrentContext
+        }
+        else if SFConfiguartion.shared.ui.SFControllerPresentation == SFControllerPresentation.full{
+        self.modalPresentationStyle = .fullScreen
+        }
+        else if SFConfiguartion.shared.ui.SFControllerPresentation == SFControllerPresentation.popupCenter{
+        self.modalPresentationStyle = .overCurrentContext
+        self.modalTransitionStyle = .crossDissolve
+        }
+        
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
     }
     public override func loadView() {
-       let bundle = Bundle(for: self.classForCoder)
-        bundle.loadNibNamed("SFCardVC", owner: self, options: nil)
+        
+        self.view = UIView()
+        if SFConfiguartion.shared.ui.SFControllerPresentation == SFControllerPresentation.bottomSheet{
+            self.view.backgroundColor = .clear
+        }
+        else if SFConfiguartion.shared.ui.SFControllerPresentation == SFControllerPresentation.full{
+          self.view.backgroundColor = .white
+        }
+        else if SFConfiguartion.shared.ui.SFControllerPresentation == SFControllerPresentation.popupCenter{
+                 self.view.backgroundColor = .clear
+               }
+       //
+        setUpView()
        
     }
 
     
+    private func setUpView() {
+        
+       
+        let SFFieldsInputView = UIView()
+        SFFieldsInputView.backgroundColor = .white
+        self.view.addSubview(SFFieldsInputView)
+        
+        //MARK:- Add fields to inputView
+        SFFieldsInputView.addSubview(fieldStackView)
+        //self.view.addSubview(fieldStackView)
+        self.modalPresentationStyle = .overCurrentContext
+        fieldStackView.alignment = .fill
+        fieldStackView.spacing = 20
+        fieldStackView.distribution = .fillEqually
+        fieldStackView.axis = .vertical
+        //fieldStackView.backgroundColor = .green
+        SFFieldsInputView.translatesAutoresizingMaskIntoConstraints = false
+        SFFieldsInputView.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: SFConfiguartion.shared.ui.SFControllerPresentation == SFControllerPresentation.popupCenter ? 20 : 0).isActive = true
+        SFFieldsInputView.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: SFConfiguartion.shared.ui.SFControllerPresentation == SFControllerPresentation.popupCenter ? -20 : 0).isActive = true
+        
+        if SFConfiguartion.shared.ui.SFControllerPresentation == .full {
+        SFFieldsInputView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 0).isActive = true
+        }
+        else if SFConfiguartion.shared.ui.SFControllerPresentation == .bottomSheet {
+          SFFieldsInputView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0).isActive = true
+        }
+        else if SFConfiguartion.shared.ui.SFControllerPresentation == .popupCenter {
+            SFFieldsInputView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0).isActive = true
+            SFFieldsInputView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 0).isActive = true
+            
+               }
+        //MARK:- Input stackViewConstarint
+        fieldStackView.translatesAutoresizingMaskIntoConstraints = false
+        fieldStackView.leftAnchor.constraint(equalTo: SFFieldsInputView.leftAnchor, constant: 20).isActive = true
+               fieldStackView.rightAnchor.constraint(equalTo: SFFieldsInputView.rightAnchor, constant: -20).isActive = true
+        fieldStackView.topAnchor.constraint(equalTo: SFFieldsInputView.topAnchor, constant: 40).isActive = true
+        fieldStackView.bottomAnchor.constraint(equalTo: SFFieldsInputView.bottomAnchor, constant: -40).isActive = true
+        
+        if SFConfiguartion.shared.ui.isCardNameFieldVisible == true {
+            
+            cardHolderNameTF = UITextField()
+            fieldStackView.addArrangedSubview(cardHolderNameTF!)
+        }
+        cardNumberTF = UITextField()
+        
+        fieldStackView.addArrangedSubview(cardNumberTF!)
+        
+        let cvc_expireystackView = UIStackView()
+        cvc_expireystackView.alignment = .fill
+        cvc_expireystackView.axis = .horizontal
+        cvc_expireystackView.distribution = .fillEqually
+        cvc_expireystackView.spacing = 50
+        expireyDateTF = UITextField()
+        cvc_expireystackView.addArrangedSubview(expireyDateTF!)
+        cvcTF = UITextField()
+        cvc_expireystackView.addArrangedSubview(cvcTF!)
+        fieldStackView.addArrangedSubview(cvc_expireystackView)
+        
+        //MARK:- If Negetive Action Button visible then add in Horizontal Stack
+        if SFConfiguartion.shared.ui.isNegetiveButtonVisible  == true {
+          
+            let buttonStack  = UIStackView()
+            buttonStack.alignment = .fill
+            buttonStack.axis = .horizontal
+            buttonStack.distribution = .fillEqually
+            buttonStack.spacing = 50
+            negetiveActionBtn = UIButton()
+            negetiveActionBtn?.addTarget(self, action: #selector(negetiveAction), for: .touchUpInside)
+            buttonStack.addArrangedSubview(negetiveActionBtn!)
+            positiveActionBtn = UIButton()
+            positiveActionBtn?.addTarget(self, action: #selector(positiveAction), for: .touchUpInside)
+            buttonStack.addArrangedSubview(positiveActionBtn!)
+            fieldStackView.addArrangedSubview(buttonStack)
+        }
+        else {
+            positiveActionBtn = UIButton()
+            positiveActionBtn?.addTarget(self, action: #selector(positiveAction), for: .touchUpInside)
+            fieldStackView.addArrangedSubview(positiveActionBtn!)
+        }
+        
+      
+        self.view.layoutIfNeeded()
+    }
     
-    @IBAction func positiveAction(_ sender: Any) {
+    @objc func positiveAction() {
         
         self.positiveActionBtn?.isUserInteractionEnabled = false
           self.positiveActionBtn?.addLoader()
@@ -107,9 +224,10 @@ func handleCreditCardResponse(cardInfo:StripeCardResponse?, error:String?) {
     
     }
     
-    @IBAction func negetiveAction(_ sender: Any) {
-        
+    @objc func negetiveAction() {
+        self.dismiss(animated: true, completion: nil)
     }
+    
     /*
     // MARK: - Navigation
 

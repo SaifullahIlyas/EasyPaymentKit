@@ -12,7 +12,6 @@
 		227C545F251FC1B1008A50D4 /* CreditCardValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C5456251FC1B0008A50D4 /* CreditCardValidator.swift */; };
 		227C5460251FC1B1008A50D4 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C5457251FC1B0008A50D4 /* Helpers.swift */; };
 		227C5461251FC1B1008A50D4 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C5458251FC1B0008A50D4 /* Network.swift */; };
-		227C5462251FC1B1008A50D4 /* SFCardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227C5459251FC1B0008A50D4 /* SFCardVC.xib */; };
 		227C5463251FC1B1008A50D4 /* SFCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C545A251FC1B0008A50D4 /* SFCardVC.swift */; };
 		227C5464251FC1B1008A50D4 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C545B251FC1B0008A50D4 /* CustomTextField.swift */; };
 		227C5465251FC1B1008A50D4 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C545C251FC1B0008A50D4 /* Models.swift */; };
@@ -27,7 +26,6 @@
 		227C5456251FC1B0008A50D4 /* CreditCardValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardValidator.swift; sourceTree = "<group>"; };
 		227C5457251FC1B0008A50D4 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		227C5458251FC1B0008A50D4 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		227C5459251FC1B0008A50D4 /* SFCardVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SFCardVC.xib; sourceTree = "<group>"; };
 		227C545A251FC1B0008A50D4 /* SFCardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFCardVC.swift; sourceTree = "<group>"; };
 		227C545B251FC1B0008A50D4 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		227C545C251FC1B0008A50D4 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 				227C5456251FC1B0008A50D4 /* CreditCardValidator.swift */,
 				227C5457251FC1B0008A50D4 /* Helpers.swift */,
 				227C5458251FC1B0008A50D4 /* Network.swift */,
-				227C5459251FC1B0008A50D4 /* SFCardVC.xib */,
 				227C545A251FC1B0008A50D4 /* SFCardVC.swift */,
 				227C545B251FC1B0008A50D4 /* CustomTextField.swift */,
 				227C545C251FC1B0008A50D4 /* Models.swift */,
@@ -157,7 +154,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				227C5462251FC1B1008A50D4 /* SFCardVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,6 +1,12 @@
 
 import UIKit
 
+enum SFControllerPresentation {
+    case full
+    case popupCenter
+    case bottomSheet
+    
+}
 public class Helper {
     
     
@@ -19,11 +25,13 @@ public struct UserInterface {
     var  textFieldsTint : UIColor = .blue
     var textColor : UIColor = .blue
     var font : UIFont = UIFont.systemFont(ofSize: 14)
-   private var postiveActionButtonTitle : String = "Add"
-   private var negetiveActionButtonTitle : String = "Cancel"
+   var postiveActionButtonTitle : String = "Add"
+   var negetiveActionButtonTitle : String = "Cancel"
     var postiveActionBackColor : UIColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
     var negitiveActionBackColor : UIColor = .red
-    var isNegetiveButtonActionVisible = false
+    var isNegetiveButtonVisible = false
+    var buttontitleColor : UIColor = .white
+    var SFControllerPresentation : SFControllerPresentation = .popupCenter
     
 }
 extension Collection {
