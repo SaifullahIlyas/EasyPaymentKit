@@ -25,9 +25,25 @@ EasyPaymentKit is a customizable payment Acccept Method comes with pre define UI
    
         SFConfiguartion.shared.publicKey = "YOUR_PUBLIC_KEY"
         
-   Conform your ViewController or Source file to <b>SFPaymentInfoAble</b>
+   Conform your ViewController or Source file conforms to <b>SFPaymentInfoAble</b>
+   sample methods are 
+   
+         func didCardCreated(with info: SFCardInfo) {
+  
+        
+        
+    }
+    func didBankAccountTokenGenerated() {
+        
+    }
+    
+    func didErrorWhileGeneratingToken(reason error: String) {
+ 
+    }
+    
         
  ### Sample Output
  
- <img src="https://github.com/SaifullahIlyas/SaifullahIlyas.github.io/blob/master/smartLectureNotesimg/smtlogin.png" width=200> 
+ <img src="https://github.com/SaifullahIlyas/OutPutFiles/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%202020-09-28%20at%2015.48.19.png" width=200>
+ 
 
