@@ -3,8 +3,10 @@
 EasyPaymentKit is a customizable payment Acccept Method comes with pre define UI to accept credit, debit card and  Bank Account.
 # How To Use EasyPaymentKit?
   EasyPaymentKit is Availble through cocoapod
-  Add pod 'EasyPaymentKit' in your pode file 
-  Run pod install
+  Add pod in pod file by coping following line 
+  pod 'EasyPaymentKit' 
+  Run the following command to use library
+  pod install
   if your project dont hold pod file then create pod file by pod init
    You can also intregrate manually by adding Source file to your Project
    
