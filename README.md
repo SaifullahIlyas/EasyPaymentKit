@@ -27,5 +27,5 @@ EasyPaymentKit is a customizable payment Acccept Method comes with pre define UI
         
  ### Sample Output
  
- 
+ <img src="https://github.com/SaifullahIlyas/SaifullahIlyas.github.io/blob/master/smartLectureNotesimg/smtlogin.png" width=200> 
 
