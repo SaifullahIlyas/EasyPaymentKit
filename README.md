@@ -23,5 +23,9 @@ EasyPaymentKit is a customizable payment Acccept Method comes with pre define UI
         
    make your you added you payment gateway public key to add Card by 
    
-        SFConfiguartion.shared.publicKey = "pk_test_J1qoKzc5TfTY7DxzZemAgJuj0063HLXlTt"
+        SFConfiguartion.shared.publicKey = "YOUR_PUBLIC_KEY"
+        
+ ### Sample Output
+ 
+ 
 
