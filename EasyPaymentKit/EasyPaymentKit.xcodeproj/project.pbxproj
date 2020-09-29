@@ -16,6 +16,7 @@
 		227C5464251FC1B1008A50D4 /* SF+CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C545B251FC1B0008A50D4 /* SF+CustomTextField.swift */; };
 		227C5465251FC1B1008A50D4 /* SF+Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C545C251FC1B0008A50D4 /* SF+Models.swift */; };
 		227C5466251FC1B1008A50D4 /* SF+CreditCardValidationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C545D251FC1B0008A50D4 /* SF+CreditCardValidationType.swift */; };
+		22DBE6EB2523B4A30027060C /* SF+SFAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DBE6EA2523B4A30027060C /* SF+SFAccountVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		227C545B251FC1B0008A50D4 /* SF+CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SF+CustomTextField.swift"; sourceTree = "<group>"; };
 		227C545C251FC1B0008A50D4 /* SF+Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SF+Models.swift"; sourceTree = "<group>"; };
 		227C545D251FC1B0008A50D4 /* SF+CreditCardValidationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SF+CreditCardValidationType.swift"; sourceTree = "<group>"; };
+		22DBE6EA2523B4A30027060C /* SF+SFAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SF+SFAccountVC.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				227C545B251FC1B0008A50D4 /* SF+CustomTextField.swift */,
 				227C545C251FC1B0008A50D4 /* SF+Models.swift */,
 				227C545D251FC1B0008A50D4 /* SF+CreditCardValidationType.swift */,
+				22DBE6EA2523B4A30027060C /* SF+SFAccountVC.swift */,
 			);
 			name = Files;
 			path = ../../Files;
@@ -165,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				227C545E251FC1B1008A50D4 /* SF+NetworkResponse.swift in Sources */,
+				22DBE6EB2523B4A30027060C /* SF+SFAccountVC.swift in Sources */,
 				227C5460251FC1B1008A50D4 /* SF+Helpers.swift in Sources */,
 				227C5464251FC1B1008A50D4 /* SF+CustomTextField.swift in Sources */,
 				227C5466251FC1B1008A50D4 /* SF+CreditCardValidationType.swift in Sources */,
