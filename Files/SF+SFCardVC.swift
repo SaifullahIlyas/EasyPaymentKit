@@ -54,7 +54,6 @@ extension SFPaymentInfoAble {
         self.cardHolderNameTF?.addLine(position: .bottom, color: .gray, width: 1)
         self.expireyDateTF?.addLine(position: .bottom, color: .gray, width: 1)
         self.cvcTF?.addLine(position: .bottom, color: .gray, width: 1)
-        
         //MARk:- Set Place Holder
         self.cardHolderNameTF?.placeholder = "John"
         self.cardNumberTF?.placeholder = "Card Number"
@@ -71,7 +70,7 @@ extension SFPaymentInfoAble {
         
         self.positiveActionBtn?.isUserInteractionEnabled = false
         self.positiveActionBtn?.alpha = self.positiveActionBtn?.isUserInteractionEnabled == true ? 1.0 : 0.95
-        
+
         //self.view.layoutIfNeeded()
         // Do any additional setup after loading the view.
     }

@@ -93,61 +93,70 @@ class SFNetwork  {
     }
 
     class func generateToken<Resp>(type sdk:PaymentSDKType,req:[String:Any],completion:@escaping (Resp?,String?)->Void) where Resp : Codable  {
-        guard let url = URL(string: sdk.description) else {
-           return
-       }
+        DispatchQueue.global().async {
+              guard let url = URL(string: sdk.description) else {
+                     return
+                 }
 
-      /* let jsonData = try! JSONEncoder().encode(req)
-        let jsonString = String(data: jsonData, encoding: .utf8)!
-        print("json string is \(jsonString)")*/
-        //let jsonData = try? JSONSerialization.data(withJSONObject: req,options: .fragmentsAllowed)
-        let jsonString = req.reduce("") { "\($0)\($1.0)=\($1.1)&" }.dropLast()
-        let jsonData = jsonString.data(using: .utf8, allowLossyConversion: false)!
-        
-    //let parameters = "bank_account%5Bcountry%5D=US&bank_account%5Bcurrency%5D=usd&bank_account%5Baccount_holder_name%5D=Jenny%20Rosen&bank_account%5Baccount_holder_type%5D=individual&bank_account%5Brouting_number%5D=110000000&bank_account%5Baccount_number%5D=000123456789"
-    //let postData =  parameters.data(using: .utf8)
-    
-        guard !SFConfiguartion.shared.publicKey.isEmpty else{
-        completion(nil,"Please Provide Your Payment Gateway Public Key")
-        return
+                /* let jsonData = try! JSONEncoder().encode(req)
+                  let jsonString = String(data: jsonData, encoding: .utf8)!
+                  print("json string is \(jsonString)")*/
+                  //let jsonData = try? JSONSerialization.data(withJSONObject: req,options: .fragmentsAllowed)
+                  let jsonString = req.reduce("") { "\($0)\($1.0)=\($1.1)&" }.dropLast()
+                  let jsonData = jsonString.data(using: .utf8, allowLossyConversion: false)!
+                  
+              //let parameters = "bank_account%5Bcountry%5D=US&bank_account%5Bcurrency%5D=usd&bank_account%5Baccount_holder_name%5D=Jenny%20Rosen&bank_account%5Baccount_holder_type%5D=individual&bank_account%5Brouting_number%5D=110000000&bank_account%5Baccount_number%5D=000123456789"
+              //let postData =  parameters.data(using: .utf8)
+              
+                  guard !SFConfiguartion.shared.publicKey.isEmpty else{
+                    DispatchQueue.main.async {
+                        completion(nil,"Please Provide Your Payment Gateway Public Key")
+                    }
+                    
+                  return
+                  }
+                 var request : URLRequest = URLRequest(url: url)
+                 request.httpMethod = "POST"
+                   request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField:"Content-Type");
+                  request.setValue("Bearer \(SFConfiguartion.shared.publicKey)", forHTTPHeaderField:"Authorization");
+                 //request.setValue(NSLocalizedString("lang", comment: ""), forHTTPHeaderField:"Accept-Language");
+                 request.httpBody = jsonData
+
+                  
+              
+
+                 let config = URLSessionConfiguration.default
+                 let session = URLSession(configuration: config)
+                 // vs let session = URLSession.shared
+                   // make the request
+                 let task = session.dataTask(with: request, completionHandler: {
+                     (data, response, error) in
+                  
+              
+                      if let error = error
+                     {
+                        DispatchQueue.main.async {
+                            completion(nil,error.localizedDescription)
+                        }
+                      
+                     }
+
+                     DispatchQueue.main.async { // Correct
+
+                         guard let responseData = data else {
+                             print("Error: did not receive data")
+                             return
+                         }
+
+                         let decoder = JSONDecoder()
+                      completion(try? decoder.decode(Resp.self, from: responseData),nil)
+                           //  let todo = try decoder.decode(T.self, from: responseData)
+                           //  NSAssertionHandler(.success(todo))
+                     }
+                 })
+                 task.resume()
         }
-       var request : URLRequest = URLRequest(url: url)
-       request.httpMethod = "POST"
-         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField:"Content-Type");
-        request.setValue("Bearer \(SFConfiguartion.shared.publicKey)", forHTTPHeaderField:"Authorization");
-       //request.setValue(NSLocalizedString("lang", comment: ""), forHTTPHeaderField:"Accept-Language");
-       request.httpBody = jsonData
-
-        
-    
-
-       let config = URLSessionConfiguration.default
-       let session = URLSession(configuration: config)
-       // vs let session = URLSession.shared
-         // make the request
-       let task = session.dataTask(with: request, completionHandler: {
-           (data, response, error) in
-        
-    
-            if let error = error
-           {
-            completion(nil,error.localizedDescription)
-           }
-
-           DispatchQueue.main.async { // Correct
-
-               guard let responseData = data else {
-                   print("Error: did not receive data")
-                   return
-               }
-
-               let decoder = JSONDecoder()
-            completion(try? decoder.decode(Resp.self, from: responseData),nil)
-                 //  let todo = try decoder.decode(T.self, from: responseData)
-                 //  NSAssertionHandler(.success(todo))
-           }
-       })
-       task.resume()
+      
         
     }
  
