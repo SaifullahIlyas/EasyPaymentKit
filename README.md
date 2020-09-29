@@ -1,1 +1,49 @@
-# StripeVC
+# EasyPaymentKit
+### What EasyPaymentKit is?
+EasyPaymentKit is a customizable payment Acccept Method comes with pre define UI to accept credit, debit card and  Bank Account.
+### How To Use EasyPaymentKit?
+  EasyPaymentKit is Availble through cocoapod
+  Add pod in pod file by coping following line 
+     
+     pod 'EasyPaymentKit' 
+  Run the following command to use library
+    
+     pod install
+  if your project dont hold pod file then create pod file by pod init
+   You can also intregrate manually by adding Source file to your Project
+   
+ ### Sample Use
+ Add following code in your view controller to show Credit or Debit card View
+        
+        let viewController = SFCardVC.init()
+        viewController.theme.SFControllerPresentation = .full
+        viewController.theme.isNegetiveButtonVisible = false
+               viewController.delegate = self
+        self.present(viewController, animated: true, completion: nil)
+        
+   make your you added you payment gateway public key to add Card by 
+   
+        SFConfiguartion.shared.publicKey = "YOUR_PUBLIC_KEY"
+        
+   Conform your ViewController or Source file conforms to <b>SFPaymentInfoAble</b>
+   sample methods are 
+   
+         func didCardCreated(with info: SFCardInfo) {
+  
+        
+        
+    }
+    func didBankAccountTokenGenerated() {
+        
+    }
+    
+    func didErrorWhileGeneratingToken(reason error: String) {
+ 
+    }
+    
+        
+ ### Sample Output
+ 
+ <img src="https://github.com/SaifullahIlyas/OutPutFiles/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%202020-09-28%20at%2015.48.19.png" width=200> <img src="https://github.com/SaifullahIlyas/OutPutFiles/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%202020-09-28%20at%2015.48.22.png" width=200> <img src="https://github.com/SaifullahIlyas/OutPutFiles/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%202020-09-28%20at%2015.49.32.png" width=200> <img src="https://github.com/SaifullahIlyas/OutPutFiles/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%202020-09-28%20at%2015.50.01.png" width=200> <img src="https://github.com/SaifullahIlyas/OutPutFiles/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%202020-09-28%20at%2015.50.08.png" width=200> <img src="https://github.com/SaifullahIlyas/OutPutFiles/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%202020-09-28%20at%2015.53.24.png" width=200> <img src="https://github.com/SaifullahIlyas/OutPutFiles/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%202020-09-28%20at%2015.53.43.png" width=200> <img src="https://github.com/SaifullahIlyas/OutPutFiles/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%202020-09-28%20at%2015.54.39.png" width=200>
+ 
+
