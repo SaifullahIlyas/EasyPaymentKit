@@ -49,6 +49,26 @@ struct CreateBankTokenRequest: ParamConveritible{
         case currency = "bank_account[currency]"
     }
 }
+//MARK:- Create bank Account
+struct CreateBankAccountRequestViewModel:ParamConveritible {
+    let country :String?
+    let currency : String?
+    let bankAccount : String?
+    let routingNumber : String?
+    init(bankAccount:String?,routingNumber:String?,country:String?,currency:String?) {
+        self.country = country
+        self.bankAccount = bankAccount
+        self.routingNumber = routingNumber
+        self.currency = currency
+    }
+    enum CodingKeys: String, CodingKey {
+        case country = "bank_account[country]"
+        case bankAccount = "bank_account[account_number]"
+        case routingNumber = "bank_account[routing_number]"
+        case currency = "bank_account[currency]"
+    }
+}
+
 
 //MARK:- Create Customer card Token
 struct CardToken:ParamConveritible {
