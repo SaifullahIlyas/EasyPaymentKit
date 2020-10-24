@@ -36,8 +36,8 @@ import UIKit
         self.routingNumber?.addLine(position: .bottom, color: .gray, width: 1)
         //MARk:- Set Place Holder
         self.accountHolderName?.placeholder = "Account Holder Name e.g JOHN"
-        self.accountNumber?.placeholder = "Account Number"
-        self.routingNumber?.placeholder = "123"
+        self.accountNumber?.placeholder = "Account Number e.g 0123456789"
+        self.routingNumber?.placeholder = "Routing Nummber e.g 123"
         self.accountHolderName?.isHidden = !(theme.isCardNameFieldVisible)
         self.positiveActionBtn?.backgroundColor = theme.postiveActionBackColor
         self.negetiveActionBtn?.backgroundColor = theme.negitiveActionBackColor
