@@ -66,3 +66,4 @@ Conforms your ViewController to <b>SFPaymentInfoAble</b>
     }
 #### Accept/Add Account Screenshots
 
+ <img src="https://github.com/SaifullahIlyas/OutPutFiles/blob/master/easypaymentkit-Account/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%202020-10-24%20at%2023.50.24.png" width=200> <img src="https://github.com/SaifullahIlyas/OutPutFiles/blob/master/easypaymentkit-Account/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%202020-10-24%20at%2023.50.44.png" width=200>
