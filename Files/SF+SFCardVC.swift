@@ -11,13 +11,12 @@ import UIKit
 
 public protocol SFPaymentInfoAble : class{
     func  didCardCreated(with info:SFCardInfo)
-    func didBankAccountTokenGenerated()
+    func didBankAccountCreated(with token:String)
     func didErrorWhileGeneratingToken(reason error : String)
 }
 
 extension SFPaymentInfoAble {
-    func didBankAccountTokenGenerated(){
-        //MARK:- Default implementation
+    func didBankAccountCreated(with token:String){
     }
     func  didCardCreated(with info:SFCardInfo) {
         
