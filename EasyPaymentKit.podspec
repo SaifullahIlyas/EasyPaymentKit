@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "EasyPaymentKit"
-  spec.version      = "0.0.14"
+  spec.version      = "0.0.2"
   spec.summary      = "Accept Credtit or debit card with no effort"
 
   # This description is used to generate tags and improve search results.
